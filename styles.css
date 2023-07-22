@@ -252,6 +252,36 @@ body {
     padding: 15px 30px;
     border-radius: 8px;
     background-color: #3e1f92;
-    color: #fff;
     cursor: pointer;
+    position: relative;
+}
+.information__btn span {
+    position: relative;
+    color: #fff;
+    z-index: 1;
+    transition: color 0.4s ease;
+}
+.information__btn::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    background-color: #4158d0;
+    background-image: linear-gradient(
+        43deg,
+        #4158d0 0%,
+        #c850c0 46%,
+        #ffcc70 100%
+    );
+    border-radius: 8px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    transition: width 0.5s ease-in-out;
+}
+.information__btn:hover::before {
+    width: 100%;
+}
+.information__btn:hover span {
+    color: orange;
 }
