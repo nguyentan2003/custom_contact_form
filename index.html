@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="./reset.css" />
+        <link rel="stylesheet" href="./styles.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <title>Contact Login</title>
+    </head>
+    <body>
+        <h1 class="title">Contact</h1>
+        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        <div class="main-content">
+            <article class="available">
+                <div class="available__main">
+                    <h3 class="available__title">Contact Ininformation</h3>
+                    <p class="available__desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Molestias, aut?
+                    </p>
+                    <div class="available__contact">
+                        <div class="available__row">
+                            <div class="available__icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <p class="phone">+01234242443</p>
+                        </div>
+
+                        <div class="available__row">
+                            <div class="available__icon">
+                                <i class="fa-regular fa-envelope"></i>
+                            </div>
+                            <p class="mail">hello@gmail.com</p>
+                        </div>
+
+                        <div class="available__row">
+                            <div class="available__icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <p class="address">102 Street 1714 Don</p>
+                        </div>
+                    </div>
+                    <div class="available__end">
+                        <div class="available__icon-end">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </div>
+                        <div class="available__icon-end">
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+                        <div class="available__icon-end">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div class="available__icon-end">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <form
+                class="information"
+                method="post"
+                action="https://api-gateway.fullstack.edu.vn/action_page.php"
+                autocomplete="off"
+            >
+                <section class="information__ennter">
+                    <div class="enter__row">
+                        <label for="first-name">First Name</label>
+                        <input
+                            required
+                            placeholder="Enter first name "
+                            type="text"
+                            name="first-name"
+                            id="first-name"
+                        />
+                        <p class="error">Vui lòng nhập trường này</p>
+                    </div>
+
+                    <div class="enter__row">
+                        <label for="last-name">Last Name</label>
+                        <input
+                            required
+                            placeholder="Enter last name "
+                            type="text"
+                            name="last-name"
+                            id="last-name"
+                        />
+                        <p class="error">Vui lòng nhập trường này</p>
+                    </div>
+
+                    <div class="enter__row">
+                        <label for="mail">Mail</label>
+                        <input
+                            required
+                            placeholder=" "
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                            type="email"
+                            name="mail"
+                            id="mail"
+                            value="nguyentrongtan@gmail.com"
+                        />
+                        <p class="error">Vui lòng nhập trường này</p>
+                    </div>
+
+                    <div class="enter__row">
+                        <label for="phone">Phone</label>
+                        <input
+                            required
+                            placeholder="Enter Phone "
+                            pattern="^(0|\+?84)(3|5|7|8|9)[0-9]{8}$"
+                            type="tel"
+                            name="phone"
+                            id="phone"
+                        />
+                        <p class="error">Vui lòng nhập trường này</p>
+                    </div>
+                </section>
+
+                <p class="informaition__question">
+                    Lorem ipsum dolor sit amet.?
+                </p>
+                <div class="information__audio">
+                    <div class="information__audio-item">
+                        <input
+                            required
+                            type="radio"
+                            name="orientation"
+                            id="web-design"
+                            hidden
+                        />
+                        <label for="web-design">Web Design</label>
+                    </div>
+
+                    <div class="information__audio-item">
+                        <input
+                            type="radio"
+                            name="orientation"
+                            id="web-development"
+                            hidden
+                        />
+                        <label for="web-development">Web Development</label>
+                    </div>
+
+                    <div class="information__audio-item">
+                        <input
+                            type="radio"
+                            name="orientation"
+                            id="logo-design"
+                            hidden
+                        />
+                        <label for="logo-design">Logo Design</label>
+                    </div>
+
+                    <div class="information__audio-item">
+                        <input
+                            type="radio"
+                            name="orientation"
+                            id="other"
+                            hidden
+                        />
+                        <label for="other">Other</label>
+                    </div>
+                </div>
+                <div class="information__message">
+                    <label for="message">Message</label>
+                    <input
+                        placeholder="Write your message"
+                        type="text"
+                        name="message"
+                        id="message"
+                    />
+                </div>
+                <button class="information__btn">Send Message</button>
+            </form>
+        </div>
+    </body>
+</html>

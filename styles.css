@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    padding: 80px 70px;
+    font-size: 16px;
+    margin: 0 230px;
+    background-color: #fff;
+}
+
+.title {
+    color: #010447;
+    margin-bottom: 30px;
+    font-weight: 800;
+    font-style: unset;
+    font-size: 40px;
+    text-align: center;
+}
+.desc {
+    color: #838294;
+    margin-bottom: 40px;
+    text-align: center;
+    line-height: 15px;
+}
+.main-content {
+    display: flex;
+    background-color: #fff;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+.available {
+    margin: 5px;
+    background-color: #3e1f92;
+    width: 40%;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.available__main {
+    padding: 30px;
+}
+
+.available__title {
+    font-size: 25px;
+    font-weight: 600px;
+    margin-bottom: 20px;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.available__desc {
+    margin-bottom: 50px;
+    color: #c7b0fe;
+    font-size: 15px;
+}
+.available__contact {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    margin-bottom: 130px;
+}
+.available__row {
+    display: flex;
+    column-gap: 20px;
+    font-size: 12px;
+}
+.available__row p {
+    color: #dccef2;
+    font-size: 15px;
+}
+.available__icon i {
+    color: #efa0be;
+    font-size: 16px;
+}
+
+.available__end {
+    display: flex;
+    column-gap: 15px;
+    font-size: 14px;
+}
+.available__icon-end {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.available__icon-end:hover {
+    background-color: #efa0be;
+    cursor: pointer;
+}
+
+.available::before {
+    content: "";
+    display: inline-block;
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    background-color: #efa0be;
+    bottom: 0;
+    right: 0;
+    clip-path: circle(98.5% at 99% 99%);
+}
+.available::after {
+    content: "";
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: #7e53fa;
+    position: absolute;
+    border-radius: 50%;
+    bottom: 60px;
+    right: 55px;
+    opacity: 0.9;
+}
+
+/* formaition */
+.information {
+    padding: 30px;
+    flex-grow: 1;
+}
+/* .information:has(:invalid) .information__btn {
+    opacity: 0.5;
+    pointer-events: none;
+} */
+
+.information__ennter {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.information__ennter label {
+    display: block;
+    color: #04074d;
+    font-weight: 800;
+    font-size: 14px;
+    cursor: pointer;
+}
+.enter__row input {
+    width: calc(100% - 15px);
+    outline: none;
+    border: none;
+    padding: 8px 0 14px;
+    border-bottom: 2px solid #dfdee5;
+    color: #282847;
+    font-weight: 600;
+}
+.enter__row input::placeholder {
+    color: #babbc6;
+}
+
+.enter__row:focus-within label {
+    color: #5e479d;
+}
+.enter__row:focus-within input {
+    border-bottom: 2px solid #5e479d;
+}
+/* 
+.enter__row p {
+    color: red;
+    display: none;
+}
+.enter__row input:invalid ~ .enter__row p {
+    display: block;
+} */
+.informaition__question {
+    color: #151531;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.information__audio {
+    display: flex;
+    gap: 45px;
+    margin-bottom: 40px;
+    margin-left: 27px;
+}
+.information__audio-item {
+    position: relative;
+}
+.information__audio-item label {
+    color: #444463;
+    font-weight: 400;
+    font-size: 15px;
+    cursor: pointer;
+}
+.information__audio-item label::after,
+.information__audio-item label::before {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    transition: ease 0.25s;
+}
+.information__audio-item label::before {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #999;
+    bottom: 1px;
+    left: -27px;
+    cursor: pointer;
+}
+.information__audio-item input[type="radio"]:checked ~ label::before {
+    background-color: #5e31e4;
+    border: 2px solid #5e31e4;
+    transform: translate3d(10px);
+}
+.information__audio-item input[type="radio"]:checked ~ label::after {
+    width: 8px;
+    height: 4px;
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    rotate: -45deg;
+    bottom: 8px;
+    left: -23px;
+    transform: translate3d(10px);
+}
+
+.information__message label {
+    margin-bottom: 10px;
+    color: #04074d;
+    font-weight: 600;
+    display: inline-block;
+    cursor: pointer;
+}
+.information__message input {
+    display: block;
+    padding-bottom: 30px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #dfdee5;
+    width: 100%;
+    margin-bottom: 35px;
+}
+.information__message input::placeholder {
+    color: #babbc6;
+    font-weight: 400;
+}
+
+.information__btn {
+    display: block;
+    margin-left: auto;
+    padding: 15px 30px;
+    border-radius: 8px;
+    background-color: #3e1f92;
+    color: #fff;
+    cursor: pointer;
+}
